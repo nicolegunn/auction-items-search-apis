@@ -1,7 +1,10 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const mongoose = require("./db");
+const path = require("path");
+const searchRouter = require("./routes/searchRoutes");
+const itemRouter = require("./routes/itemRoutes");
 
 const allowedOrigins = [
   // Add any frontend urls that will need to access the apis
@@ -26,8 +29,14 @@ app.use(express.json());
 // Handle preflight requests:
 app.options("*", cors(corsOptions));
 
-// const xxRouter = require("./routes/xxRoutes.js");
+// Serve static files
+app.use(express.static(path.join(__dirname, "public")));
 
-// app.use(xxRouter);
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+// Routes
+app.use(searchRouter);
+app.use(itemRouter);
 
 module.exports = app;
