@@ -7,23 +7,21 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <h1><%=item.title%></h1>
-    <ul>
-      <li><%=item.category%></li>
-    </ul>
-    <ul>
-      <li><%=item.description%></li>
-    </ul>
-    <ul>
-      <li>Start Price: $<%=item.start_price%></li>
-    </ul>
-    <ul>
-      <li>Reserve Price: $<%=item.reserve_price%></li>
-    </ul>
-    <button
-      onclick="window.location.href='/search/results?searchWord=<%= searchWord %>'"
-    >
-      Back to Search Results
-    </button>
+    <div class="container">
+      <h1><%=item.title%></h1>
+      <ul class="item-details">
+        <li>Category: <%=item.category%></li>
+        <li><%=item.description%></li>
+        <li>Start Price: $<%=item.start_price%></li>
+        <li>Reserve Price: $<%=item.reserve_price%></li>
+      </ul>
+      <button
+        onclick="window.location.href='/search/results?searchWord=<%= searchWord %>'"
+      >
+        Back to Search Results
+      </button>
+    </div>
   </body>
 </html>
+
+
