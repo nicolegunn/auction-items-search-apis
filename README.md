@@ -12,7 +12,7 @@
 
 This application includes a simple UI for entering a search term. The search term is processed using OpenAI's generative AI to retrieve the most similar items from a local instance of a MongoDB database. Matching items are displayed to the user, and the user can click on an item for more detailed information.
 
-An Auction items database can be created and seeded using the CLI tool located [here](https://github.com/nicolegunn/cli-mongodb-crud-and-seed.git)
+An Auction items database can be created and seeded using the CLI tool located [here](https://github.com/nicolegunn/cli-mongodb-crud-and-seed.git).
 
 ## Features
 
