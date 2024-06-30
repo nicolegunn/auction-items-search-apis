@@ -36,6 +36,9 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Routes
+app.get("/", (req, res) => {
+  res.redirect("/search");
+});
 app.use(searchRouter);
 app.use(itemRouter);
 

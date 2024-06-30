@@ -1,5 +1,5 @@
 {
-  "name": "mission-5-api",
+  "name": "auction-items-search-apis",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -19,5 +19,8 @@
     "fuse.js": "^7.0.0",
     "mongoose": "^8.4.3",
     "openai": "^4.51.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
